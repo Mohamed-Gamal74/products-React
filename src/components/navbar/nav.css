@@ -1,0 +1,20 @@
+.navbar {
+  background-color: var(--dark-light);
+}
+
+.navbar a {
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.navbar li {
+  padding-right: 50px;
+}
+
+.navbar-nav {
+  padding-left: 400px;
+}
+
+span {
+    color: var(--main-color);
+}

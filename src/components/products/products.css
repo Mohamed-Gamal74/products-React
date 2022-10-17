@@ -1,0 +1,47 @@
+.card {
+  background-color: var(--dark-light);
+  width: 30rem;
+  height: 550px;
+}
+
+.card::-webkit-scrollbar {
+  width: 3px;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.btn:hover {
+  color: var(--white);
+}
+
+img {
+ max-width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+h3 {
+  color: var(--main-color);
+}
+
+.cart 
+{
+  background-color: var(--white);
+  color: var(--main-color);
+}
+.cart:hover {
+  background-color: var(--main-color);
+
+}
+
+.info {
+  height: 250px;
+}

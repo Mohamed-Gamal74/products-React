@@ -1,0 +1,11 @@
+h1 {
+    color: var(--main-color);
+    font-size: 4rem;
+    margin-top: 250px;
+}
+
+.link {
+    color: var(--white);
+    margin-left: 10px;
+    text-decoration: underline;
+}
