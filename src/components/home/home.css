@@ -1,11 +1,15 @@
 h1 {
     color: var(--main-color);
     font-size: 4rem;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 .link {
     color: var(--white);
     margin-left: 10px;
     text-decoration: underline;
+}
+
+.shopping__img {
+    width: 200px;
 }

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "./nav.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
-const Nav = ({val}) => {
+const Nav = () => {
+  const globalState = useSelector((state) => state.counter.counter);
+  const cartState = useSelector((state) => state.addToCart.counter);
 
   return (
     <nav className="navbar navbar-expand-lg w-100 mb-5 shadow ">
@@ -39,7 +42,7 @@ const Nav = ({val}) => {
             </li>
             <li className="nav-item">
               <Link className="nav-link pe-5" to="/counter">
-                Counter
+                support <span>{globalState} $</span>
               </Link>
             </li>
             <li className="nav-item">
@@ -48,10 +51,10 @@ const Nav = ({val}) => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link pe-5"  >
+              <Link className="nav-link pe-5" to="/cart">
                 <FaShoppingCart className="text-light" />
-                <span> {val} </span>
-              </a>
+                <span> {cartState} </span>
+              </Link>
             </li>
           </ul>
         </div>

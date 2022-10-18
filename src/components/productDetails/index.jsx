@@ -15,7 +15,7 @@ const ProductDetails = () => {
   });
   return (
     <div className="container details__wrapper p-4 d-flex align-items-center justify-content-between  ">
-      <img src={product.image} className="mb-5" alt={product.title} />
+      <img src={product.image} className="mb-5 details__img" alt={product.title} />
 
       <div className="info__wrapper" >
         <h3>{product.title}</h3>

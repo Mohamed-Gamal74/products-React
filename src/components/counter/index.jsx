@@ -1,26 +1,30 @@
-import { useState } from "react";
+import CounterAction from "./CounterAction";
+import Counter from "./Counter";
+import { useDispatch, useSelector } from "react-redux";
+import { increamentCount, decreaseCount } from "../../redux/counterSlice";
 
-const Counter = () => {
-  let [value, setValue] = useState(0);
+const CounterContainer = () => {
+  // get the state from store whic initial is 0
+  let globalState = useSelector((state) => state.counter.counter);
 
-  let increaseValue = () => {
-    setValue(value++);
+  const dispatch = useDispatch();
+
+  const increaseValue = () => {
+    dispatch(increamentCount(1));
   };
 
-  let decreaseValue = () => {
-    value == 0 ? setValue(0) : setValue(value--);
+  const decreaseValue = () => {
+    globalState > 0 ? dispatch(decreaseCount(1)) : (globalState = 0);
   };
   return (
     <div className="d-flex align-items-center justify-content-center p-5 ">
-      <button className="btn m-5" onClick={increaseValue}>
-        increase +
-      </button>
-      <h2 className='m-5'>{value}</h2>
-      <button className="btn bg-danger m-5" onClick={decreaseValue}>
-        Decrease -
-      </button>
+      <CounterAction
+        increaseValue={increaseValue}
+        decreaseValue={decreaseValue}
+      />
+      <Counter value={globalState} />
     </div>
   );
 };
 
-export default Counter;
+export default CounterContainer;

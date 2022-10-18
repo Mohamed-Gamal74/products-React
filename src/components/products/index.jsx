@@ -2,9 +2,16 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./products.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { AddToCart } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
-const Products = ({ increase }) => {
+const Products = () => {
   const [products, setProducts] = useState([]);
+
+  const dispatch = useDispatch();
+  const addingHandler = (product) => {
+    dispatch(AddToCart(product));
+  };
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -50,7 +57,10 @@ const Products = ({ increase }) => {
                     show Details
                   </Link>
 
-                  <button className="btn cart" onClick={increase}>
+                  <button
+                    className="btn cart"
+                    onClick={() => addingHandler(product)}
+                  >
                     <FaShoppingCart />
                   </button>
                 </div>
@@ -59,9 +69,9 @@ const Products = ({ increase }) => {
           );
         })
       ) : (
-        <div class="spinner-border text-warning" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+        <div className="spinner-border text-warning" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
       )}
     </div>
   );
