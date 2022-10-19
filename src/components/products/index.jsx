@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import "./products.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { AddToCart } from "../../redux/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const authState = useSelector((state) => state.auth.auth);
 
   const dispatch = useDispatch();
   const addingHandler = (product) => {
@@ -57,12 +58,16 @@ const Products = () => {
                     show Details
                   </Link>
 
-                  <button
-                    className="btn cart"
-                    onClick={() => addingHandler(product)}
-                  >
-                    <FaShoppingCart />
-                  </button>
+                  {authState ? (
+                    <button
+                      className="btn cart"
+                      onClick={() => addingHandler(product)}
+                    >
+                      <FaShoppingCart />
+                    </button>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
             </div>

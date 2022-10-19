@@ -12,9 +12,22 @@
 }
 
 .navbar-nav {
-  padding-left: 350px;
+  padding-left: 250px;
 }
 
 span {
-    color: var(--main-color);
+  color: var(--main-color);
+}
+
+.signup {
+  background-color: var(--main-color);
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+
+.login {
+  border: 1px solid var(--white);
+  padding: 5px 10px;
+  margin-top: 3px;
+
 }

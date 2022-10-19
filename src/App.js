@@ -6,6 +6,9 @@ import Home from "./components/home";
 import Nav from "./components/navbar";
 import ProductDetails from "./components/productDetails";
 import Products from "./components/products";
+import SignUp from "./components/signup";
+import Login from './components/login'
+import NotFound from './components/notfound'
 
 function App() {
   return (
@@ -18,6 +21,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/counter" element={<CounterContainer />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+        
       </Routes>
     </BrowserRouter>
   );
