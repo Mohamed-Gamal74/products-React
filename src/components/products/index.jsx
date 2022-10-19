@@ -8,12 +8,14 @@ import { useDispatch, useSelector } from "react-redux";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const authState = useSelector((state) => state.auth.auth);
-
   const dispatch = useDispatch();
+
+  // when click the button the icon cart will increase and push to []
   const addingHandler = (product) => {
     dispatch(AddToCart(product));
   };
 
+  // fetching all data
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())

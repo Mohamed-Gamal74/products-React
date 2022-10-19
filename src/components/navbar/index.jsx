@@ -6,15 +6,19 @@ import { LogoutAction } from "../../redux/auth";
 import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  // getting all the state values
   const globalState = useSelector((state) => state.counter.counter);
   const cartState = useSelector((state) => state.addToCart.counter);
   const authState = useSelector((state) => state.auth.auth);
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
+  // onclick on the logout button will navigate to home
+  // hide the cart icon and addtocart button
+  // show the register button
   const logoutHandler = () => {
     dispatch(LogoutAction());
-    navigate('/')
+    navigate("/");
   };
 
   return (
@@ -60,6 +64,7 @@ const Nav = () => {
                 About
               </Link>
             </li>
+            {/* if the state of auth is true will show the cart icon  */}
             {authState ? (
               <li className="nav-item">
                 <Link className="nav-link pe-5" to="/cart">
@@ -71,6 +76,7 @@ const Nav = () => {
               ""
             )}
 
+            {/* if the state of auth is fals will show the register button  */}
             {authState ? (
               ""
             ) : (
@@ -81,6 +87,7 @@ const Nav = () => {
               </li>
             )}
 
+            {/* if the state of auth is fals will show the login button else will show logout button  */}
             {!authState ? (
               <li className="nav-item ">
                 <Link className="nav-link login pe-5" to="/login">

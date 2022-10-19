@@ -12,6 +12,10 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  // after submit will console data and navigate to products page 
+  // set the state of login to true 
+  // the register button will disapper and the login will be logout
+  // will show the cart icon
   const submitHandler = (data) => {
     console.table(data);
     dispatch(LoginAction());

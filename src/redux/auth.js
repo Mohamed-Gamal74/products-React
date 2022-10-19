@@ -18,5 +18,5 @@ export const authSlice = createSlice({
   },
 });
 
-// action to move to component to call
+
 export const { LoginAction, LogoutAction } = authSlice.actions;

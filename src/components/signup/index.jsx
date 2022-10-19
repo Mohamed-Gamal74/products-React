@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { LoginAction } from "../../redux/auth";
 import { useNavigate } from "react-router-dom";
 
+// options for the select button
 const options = [
   { value: "Egypt", label: "Egypt" },
   { value: "USA", label: "USA" },
@@ -12,11 +13,11 @@ const options = [
   { value: "Nederland", label: "Nederland" },
 ];
 
-const SignUp = () => {
+const SignUp = () => {  
   const navigate = useNavigate();
-  console.log(navigate);
-
   const dispatch = useDispatch();
+
+  // calling useform
   const {
     register,
     handleSubmit,
@@ -25,6 +26,8 @@ const SignUp = () => {
     watch,
   } = useForm();
 
+  // after submit will console the data and dispatch the login action
+  //and navigate to products page
   const submitHandler = (data) => {
     console.table(data);
     dispatch(LoginAction());
@@ -36,6 +39,7 @@ const SignUp = () => {
       onSubmit={handleSubmit(submitHandler)}
       className="container d-flex align-items-center flex-column register__form"
     >
+      {/* first name field  */}
       <div className="form-group w-50  mb-3">
         <label className="text-light" htmlFor="exampleInputName1">
           First Name
@@ -52,6 +56,9 @@ const SignUp = () => {
           <span className="text-danger">first name is required</span>
         )}
       </div>
+
+      {/* last name field  */}
+
       <div className="form-group w-50 mb-3">
         <label className="text-light" htmlFor="exampleInputName2">
           Last Name
@@ -69,6 +76,8 @@ const SignUp = () => {
         )}
       </div>
 
+      {/* email field  */}
+
       <div className="form-group w-50 mb-3">
         <label className="text-light" htmlFor="exampleInputName3">
           Email
@@ -85,6 +94,8 @@ const SignUp = () => {
           <span className="text-danger">email is required</span>
         )}
       </div>
+
+      {/* password field  */}
 
       <div className="form-group w-50 mb-3">
         <label className="text-light" htmlFor="exampleInputName4">
@@ -104,6 +115,8 @@ const SignUp = () => {
           <span className="text-danger">min Length is 8</span>
         )}
       </div>
+
+      {/* confirm paswrod field  */}
 
       <div className="form-group w-50 mb-3">
         <label className="text-light" htmlFor="exampleInputName5">
@@ -133,6 +146,8 @@ const SignUp = () => {
         )}
       </div>
 
+      {/* select field that imported from react select you can also add more option  */}
+
       <div className="form-group w-50 mb-3 mb-5">
         <label className="text-light" htmlFor="exampleInputName5">
           your country
@@ -150,6 +165,8 @@ const SignUp = () => {
           <span className="text-danger">select country is required</span>
         )}
       </div>
+
+      {/* checkbox */}
 
       <div className="form-group d-flex align-items-center">
         <div className="item__container">
