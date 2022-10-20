@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import cart from "./cart.webp";
+import cart from "../../assests/cart.webp";
 import "./cart.css";
 import { BsTrash } from "react-icons/bs";
 import { AiFillPlusCircle } from "react-icons/ai";

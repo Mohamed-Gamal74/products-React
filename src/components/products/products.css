@@ -23,7 +23,7 @@
 }
 
 .card-img-top {
- max-width: 200px;
+  max-width: 200px;
   height: 200px;
   margin: 0 auto;
 }
@@ -32,15 +32,18 @@ h3 {
   color: var(--main-color);
 }
 
-.cart 
-{
+.cart {
   background-color: var(--dark);
 }
 .cart:hover {
   background-color: var(--dark-light);
-
 }
 
 .info {
   height: 250px;
+}
+
+.spinner-border {
+  color: var(--main-color);
+  margin-top: 100px;
 }

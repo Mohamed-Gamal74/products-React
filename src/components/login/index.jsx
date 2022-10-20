@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { LoginAction } from "../../redux/auth";
 import { useNavigate } from "react-router-dom";
-import login from "./login.webp";
+import login from "../../assests/login.webp";
 
 const Login = () => {
   const navigate = useNavigate();

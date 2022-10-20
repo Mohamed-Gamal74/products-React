@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { LogoutAction } from "../../redux/auth";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assests/navLogo.png";
 
 const Nav = () => {
   // getting all the state values
@@ -24,8 +25,8 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg w-100 mb-5 shadow ">
       <div className="container-fluid">
-        <Link className="navbar-brand w-25" to="/">
-          Shop
+        <Link className="navbar-brand "  to="/">
+          <img src={logo} alt="logo" className="navLogo" />
         </Link>
         <button
           className="navbar-toggler"
@@ -56,7 +57,7 @@ const Nav = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link pe-5" to="/counter">
-                support <span>{globalState} $</span>
+                support <span>{globalState}$</span>
               </Link>
             </li>
             <li className="nav-item">

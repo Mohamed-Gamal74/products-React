@@ -1,0 +1,18 @@
+.aboutSection {
+    background-color: var(--dark-light);
+    margin-top: 150px;
+    border-radius: 11px;
+    width: 800px;
+}
+
+.myPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    margin-right: 50px;
+}
+
+.about__content-text {
+    color: var(--white-light);
+}

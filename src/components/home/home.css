@@ -1,19 +1,13 @@
-h1 {
-    color: var(--main-color);
-    font-size: 4rem;
-    margin-top: 150px;
+.welcomeImg {
+    width: 500px;
 }
 
 .link {
-    color: var(--dark);
     margin-left: 10px;
     text-decoration: underline;
+    color: var(--main-color);
 }
 
 .link:hover {
     color: var(--main-color);
-}
-
-.shopping__img {
-    width: 200px;
 }

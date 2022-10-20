@@ -2,17 +2,22 @@
   background-color: var(--dark);
 }
 
+.navLogo {
+  width: 60px;
+  margin-left: 50px;
+}
+
 .navbar a {
   color: var(--white);
   font-size: 1.3rem;
 }
 
 .navbar li {
-  padding-right: 30px;
+  margin-right: 30px;
 }
 
 .navbar-nav {
-  padding-left: 250px;
+  margin-left: 600px;
 }
 
 span {

@@ -1,22 +1,26 @@
 import "./home.css";
-import shopping from "./shoppingcart.webp";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import welcome from "../../assests/welcome.jpg";
 
 const Home = () => {
   const globalState = useSelector((state) => state.counter.counter);
 
   return (
     <div className="text-center text-uppercase fw-bolder">
-      <h1>Welcome to home page</h1>
-      <p>
+      <img src={welcome} alt="welcome" className="welcomeImg" />
+      <h5 className=" font-italic">
         Ready to see some awosome products?
         <Link className="link" to={"/products"}>
           Go To productS page now!
         </Link>
-      </p>
-      <h2>Total people Support {globalState} $</h2>
-      <img src={shopping} className='shopping__img' alt="shopping cart" />
+      </h5>
+      <small >
+        (You have to register or login to can add to your cart)
+      </small>
+      <h2 className="fw-bold mt-5">
+        Total people Support <span>{globalState}$</span>
+      </h2>
     </div>
   );
 };

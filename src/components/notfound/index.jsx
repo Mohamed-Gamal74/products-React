@@ -3,7 +3,7 @@ import "./notFound.css";
 
 const NotFound = () => {
   return (
-    <section class="d-flex flex-column align-items-center justify-content-center">
+    <section class="d-flex flex-column align-items-center justify-content-center mt-5">
       <h1 class=" text-dark notFound">
         4<span>0</span>4
       </h1>

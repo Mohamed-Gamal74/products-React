@@ -68,9 +68,15 @@ const Products = () => {
                       <FaShoppingCart />
                     </button>
                   ) : (
-                    <span >
-                      <Link className="text-dark " to='/login' >Login</Link> | 
-                      <Link className="text-dark " to='/signup'> Register</Link> 
+                    <span>
+                      <Link className="text-dark " to="/login">
+                        Login
+                      </Link>{" "}
+                      |
+                      <Link className="text-dark " to="/signup">
+                        {" "}
+                        Register
+                      </Link>
                     </span>
                   )}
                 </div>
@@ -79,9 +85,7 @@ const Products = () => {
           );
         })
       ) : (
-        <div className="spinner-border text-warning" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
+        <div className="spinner-border" role="status"></div>
       )}
     </div>
   );
