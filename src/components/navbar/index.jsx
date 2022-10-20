@@ -96,7 +96,7 @@ const Nav = () => {
               </li>
             ) : (
               <li className="nav-item" onClick={logoutHandler}>
-                <Link className="nav-link bg-danger">Logout</Link>
+                <Link className="nav-link logout">Logout</Link>
               </li>
             )}
           </ul>
