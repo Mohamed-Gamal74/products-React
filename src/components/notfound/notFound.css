@@ -10,8 +10,9 @@ section {
   border: 1px solid var(--white);
   padding: 10px 20px;
   color: var(--white);
+  background-color: var(--dark);
 }
 
 .goHome:hover {
-  color: var(--main-color);
+  color: var(--white);
 }
