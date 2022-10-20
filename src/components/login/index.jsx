@@ -25,12 +25,12 @@ const Login = () => {
 
   return (
     <div className="d-flex align-items-center justify-content-center container" >
-      <img src={login} alt="login" />
+      <img src={login} alt="login" className="w-50" />
       <form
         onSubmit={handleSubmit(submitHandler)}
         className="container  d-flex align-items-center flex-column"
       >
-        <div className="form-group w-50">
+        <div className="form-group w-75">
           <label htmlFor="exampleInputEmail1">Email address</label>
           <input
             type="email"
@@ -47,7 +47,7 @@ const Login = () => {
             We'll never share your email with anyone else.
           </small>
         </div>
-        <div className="form-group w-50 ">
+        <div className="form-group w-75 ">
           <label htmlFor="exampleInputPassword1">Password</label>
           <input
             type="password"
@@ -64,8 +64,8 @@ const Login = () => {
           )}
         </div>
 
-        <button type="submit" className="btn btn-primary w-50">
-          Submit
+        <button type="submit" className="btn btn-primary w-75">
+          Login
         </button>
       </form>
     </div>

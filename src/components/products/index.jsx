@@ -42,7 +42,7 @@ const Products = () => {
               <div className="card-body">
                 <div className="info">
                   <h3 className="card-title">{product.title}</h3>
-                  <p className="card-text text-light">{product.category}</p>
+                  <p className="card-text text-dark">{product.category}</p>
                   <div className=" d-flex justify-content-between mt-5">
                     <p className="card-text fs-4">
                       price is : {product.price} $
@@ -62,15 +62,15 @@ const Products = () => {
 
                   {authState ? (
                     <button
-                      className="btn cart"
+                      className="btn cart "
                       onClick={() => addingHandler(product)}
                     >
                       <FaShoppingCart />
                     </button>
                   ) : (
-                    <span className="text-light">
-                      <Link className="text-light " to='/login' >Login</Link> | 
-                      <Link className="text-light " to='/signup'> Register</Link> 
+                    <span >
+                      <Link className="text-dark " to='/login' >Login</Link> | 
+                      <Link className="text-dark " to='/signup'> Register</Link> 
                     </span>
                   )}
                 </div>

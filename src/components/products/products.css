@@ -1,5 +1,5 @@
 .card {
-  background-color: var(--dark-light);
+  background-color: var(--white);
   width: 30rem;
   height: 550px;
 }
@@ -34,11 +34,10 @@ h3 {
 
 .cart 
 {
-  background-color: var(--white);
-  color: var(--main-color);
+  background-color: var(--dark);
 }
 .cart:hover {
-  background-color: var(--main-color);
+  background-color: var(--dark-light);
 
 }
 

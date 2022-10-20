@@ -26,7 +26,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="container details__wrapper p-4 d-flex align-items-center justify-content-between  ">
+    <div className="container details__wrapper p-4 d-flex align-items-center justify-content-between shadow ">
       <img
         src={product.image}
         className="mb-5 details__img"
@@ -43,11 +43,11 @@ const ProductDetails = () => {
           </button>
         ) : (
           <span>
-            <Link className="text-dark p-2 " to="/login">
+            <Link className="text-light p-2 " to="/login">
               Login
             </Link>
             |
-            <Link className="text-dark p-2" to="/signup">
+            <Link className="text-light p-2" to="/signup">
               Register
             </Link>
           </span>

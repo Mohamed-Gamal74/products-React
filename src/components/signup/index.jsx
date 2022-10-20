@@ -37,11 +37,11 @@ const SignUp = () => {
   return (
     <form
       onSubmit={handleSubmit(submitHandler)}
-      className="container d-flex align-items-center flex-column register__form"
+      className="container d-flex align-items-center  flex-column register__form  shadow p-3"
     >
       {/* first name field  */}
-      <div className="form-group w-50  mb-3">
-        <label className="text-light" htmlFor="exampleInputName1">
+      <div className="form-group w-75  mb-3">
+        <label  htmlFor="exampleInputName1">
           First Name
         </label>
         <input
@@ -59,8 +59,8 @@ const SignUp = () => {
 
       {/* last name field  */}
 
-      <div className="form-group w-50 mb-3">
-        <label className="text-light" htmlFor="exampleInputName2">
+      <div className="form-group w-75 mb-3">
+        <label  htmlFor="exampleInputName2">
           Last Name
         </label>
         <input
@@ -78,8 +78,8 @@ const SignUp = () => {
 
       {/* email field  */}
 
-      <div className="form-group w-50 mb-3">
-        <label className="text-light" htmlFor="exampleInputName3">
+      <div className="form-group w-75 mb-3">
+        <label htmlFor="exampleInputName3">
           Email
         </label>
         <input
@@ -97,8 +97,8 @@ const SignUp = () => {
 
       {/* password field  */}
 
-      <div className="form-group w-50 mb-3">
-        <label className="text-light" htmlFor="exampleInputName4">
+      <div className="form-group w-75 mb-3">
+        <label  htmlFor="exampleInputName4">
           Password
         </label>
         <input
@@ -118,8 +118,8 @@ const SignUp = () => {
 
       {/* confirm paswrod field  */}
 
-      <div className="form-group w-50 mb-3">
-        <label className="text-light" htmlFor="exampleInputName5">
+      <div className="form-group w-75 mb-3">
+        <label  htmlFor="exampleInputName5">
           confirm Password
         </label>
         <input
@@ -148,8 +148,8 @@ const SignUp = () => {
 
       {/* select field that imported from react select you can also add more option  */}
 
-      <div className="form-group w-50 mb-3 mb-5">
-        <label className="text-light" htmlFor="exampleInputName5">
+      <div className="form-group w-75 mb-3 mb-5">
+        <label  htmlFor="exampleInputName5">
           your country
         </label>
         <Controller
@@ -186,7 +186,7 @@ const SignUp = () => {
         </div>
 
         <button type="submit" className="btn btn-primary">
-          Submit
+          Register
         </button>
       </div>
     </form>

@@ -5,9 +5,13 @@ h1 {
 }
 
 .link {
-    color: var(--white);
+    color: var(--dark);
     margin-left: 10px;
     text-decoration: underline;
+}
+
+.link:hover {
+    color: var(--main-color);
 }
 
 .shopping__img {

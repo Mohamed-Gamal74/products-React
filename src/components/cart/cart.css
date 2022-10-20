@@ -3,6 +3,15 @@
   color: var(--main-color);
 }
 
+table {
+  background-color: var(--dark-light);
+
+}
+
+th , td {
+  color: var(--white);
+}
+
 .shop__now {
   background-color: var(--main-color);
   width: fit-content;
@@ -10,11 +19,11 @@
   padding: 10px;
 }
 
-.link {
+.cartLink {
   color: var(--white);
 }
 
-.link:hover {
+.cartLink:hover {
   color: var(--white);
 }
 

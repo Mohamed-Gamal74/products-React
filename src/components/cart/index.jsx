@@ -56,7 +56,7 @@ const Cart = () => {
 
       {!!cartState.length && (
         <>
-          <table className="table container table-striped table-light text-uppercase">
+          <table className="table container table-striped  text-uppercase">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -105,7 +105,7 @@ const Cart = () => {
               );
             })}
           </table>
-          <div className="price__info container d-flex align-items-center justify-content-between">
+          <div className="price__info text-light container d-flex align-items-center justify-content-between">
             <h4>
               Total price is : <span>{total.toFixed(2)}$</span>
             </h4>
@@ -119,7 +119,7 @@ const Cart = () => {
         <div className="img__wrapper text-center  ">
           <img src={cart} alt="cart" />
           <h2 className="shop__now">
-            <Link className="link" to="/products">
+            <Link className="cartLink" to="/products">
               Go Shop now!
             </Link>
           </h2>
