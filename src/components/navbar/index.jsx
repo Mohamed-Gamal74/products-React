@@ -91,12 +91,12 @@ const Nav = () => {
             {!authState ? (
               <li className="nav-item ">
                 <Link className="nav-link login pe-5" to="/login">
-                  LogIn
+                  Login
                 </Link>
               </li>
             ) : (
               <li className="nav-item" onClick={logoutHandler}>
-                <Link className="nav-link login pe-5">Logout</Link>
+                <Link className="nav-link bg-danger">Logout</Link>
               </li>
             )}
           </ul>

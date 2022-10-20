@@ -68,7 +68,10 @@ const Products = () => {
                       <FaShoppingCart />
                     </button>
                   ) : (
-                    ""
+                    <span className="text-light">
+                      <Link className="text-light " to='/login' >Login</Link> | 
+                      <Link className="text-light " to='/signup'> Register</Link> 
+                    </span>
                   )}
                 </div>
               </div>
